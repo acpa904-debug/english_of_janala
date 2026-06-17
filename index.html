@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+<body>
+    
+    <header>
+        <div class="navbar bg-base-100 shadow-sm px-4">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <button tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </button>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-md">
+                        <li><a href=""><i class="fa-solid fa-question"></i> FAQ</a></li>
+                        <li><a href=""><i class="fa-solid fa-book-open"></i> Learn</a></li>
+                        <li><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                    </ul>
+                </div>
+                
+                <a href="#" class="flex items-center gap-1 ml-2">
+                    <span class="text-lg font-bold">English</span>
+                    <img src="./assets/logo.png" alt="Logo" class="h-6">
+                    <span class="bangla_font">জানালা</span>
+                </a>
+            </div>
+
+            <div class="navbar-end hidden lg:flex">
+                <ul class="menu menu-horizontal gap-2 px-1">
+                    <li><a href="" class="btn btn-dash btn-primary"><i class="fa-solid fa-question"></i> FAQ</a></li>
+                    <li><a href="" class="btn btn-dash btn-primary"><i class="fa-solid fa-book-open"></i> Learn</a></li>
+                    <li><a href="" class="btn btn-dash btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner section -->
+     <section class="banner flex-col-reverse md:flex-row flex items-center justify-between gap-3 py-3 w-11/12 mx-auto">
+         
+        <div class="contain flex-1 text-center md:text-left">
+            <h2 class="text-4xl font-bold mb-5">English is<span class="text-primary"> Easy !!</span></h2>
+            <p class="bangla_font mb-5">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন।
+                 আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান,
+                 আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+
+                 <!-- form section -->
+             <form class="form space-y-5">
+                <input type="text" placeholder="Enter your email" class="input input-bordered">
+                <input type="password" placeholder="***********" class="input input-bordered"> <br/>
+                <button class="btn btn-primary">Get Started</button>
+            </form>
+        </div>
+
+         <div class="imgs flex-1">
+            <img src="./assets/hero-student.png" alt="">
+         </div>
+         
+     </section>
+
+     <!-- lessone container -->
+      <section class="lessone w-11/12 mx-auto my-10 text-center">
+          <!-- <h2 class="text-4xl font-bold mb-5 text-sky-400">Let's<span>Learn Vocabularies</span></h2> -->
+          <h2 class="text-4xl font-bold mb-5"><span class=" text-sky-400">Let's</span> Learn Vocabularies</h2>
+
+          <!-- lessone_container -->
+          <div id="lessone_container"class="flex justify-center text-center flex-wrap gap-5">
+          </div>
+
+          <!--spine Container and  surch buttone stat akta div ar moddo raka hoyca-->
+<div class="relative min-h-[400px] w-11/12 mx-auto my-10">
+    <!-- spine Container -->
+           <section id="spinner" class="absolute inset-0 flex justify-center items-center py-10 hidden">
+            <span class="loading loading-bars loading-xl"></span>
+           </section>
+
+           
+<!-- surch buttone stat-->
+    <section class="surch flex justify-center mt-20 ">
+        <div class="join">
+
+            <div>
+                <label class="input validator join-item">
+                 <input id="serchInput" type="text" placeholder="scerch vocabulary"/>
+                </label>
+            </div>
+
+        <button id="serchBatton"class="btn btn-primary join-item">scerch</button>
+        </div>
+    </section>
+ 
+<!-- surch buttone ends-->
+
+          <!-- word_container -->
+         <section id="word_container" 
+                  class="w-11/12 mx-auto bg-gray-100 p-5 my-10 grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                  <div class="col-span-full space-y-3">
+                    <p class="font-bold text-gray-400 bangla_font">একটি Lesson Select করুন।</p>
+                    <h2 class="font-extrabold text-2xl bangla_font">আপনি এখনো কোন Lesson Select করেন ন</h2>
+                  </div>
+          </section>
+</div>
+            
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_words_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+
+  <div id="deteals_container"class="space-y-5 text-left">
+   
+  </div>
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal-->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+<script src="index.js"></script>
+</body>
+</html>
