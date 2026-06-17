@@ -1,0 +1,15 @@
+*{
+     font-family: "Poppins", sans-serif;
+}
+.bangla_font{
+      font-family: "Hind Siliguri", sans-serif;
+}
+
+.btn-active{
+      background-color: #422AD5;
+      color:white
+}
+
+#word_container, #spinner{
+    transition: all 0.3s ease-in-out;
+}
